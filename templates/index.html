@@ -1,0 +1,134 @@
+<!doctype html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<html>
+	<head>
+		<title>BS-Sense</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="/static/style.css">
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body id="top">
+ 	<header id="header">
+				<div class="content">
+				  <h1><a href="#">BS-Sense</a></h1>
+				  <p>Ever wondered how much BS there is around you?</p>
+				  <p>Of course you have.</p>
+				  <ul class="actions">
+					<li></li>
+						<li><a href="#one" class="button icon fa-chevron-down scrolly">Check it out</a></li>
+				  </ul>
+				</div>
+			  <div class="inner"><img src="/static/screen1.png" alt="" /></div>
+			</header>
+
+		<!-- One -->
+			<section id="one" class="wrapper style2 special">
+				<header class="major">
+				  <h2>Type in a search term to see just how "factual" the world is about it</h2>
+				</header>
+      <form action="" method="post">
+        <input type="text" placeholder="" name="search_query" value="">
+<!--          <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}"> -->
+        <input class="btn btn-default" type="submit" value="Search">
+      </form>
+      {% if search_query %}
+        <p class="search_query"><strong>Search Query:</strong> {{ search_query }}
+      {% endif %}
+    </div>
+    			<section id="one" class="wrapper style2 special">
+				<header class="major">
+				  <h2>Correlation of Subjectivity to Emotional Response</h2>
+				  <p>My BS-sense is tingling...</p>
+				</header>
+    <div>
+    <a href="https://plot.ly/~lastps/0/" target="_blank" title="plot from API" style="display: block; text-align: center;"><img src="https://plot.ly/~lastps/0.png" alt="plot from API" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="lastps:0"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+<div>
+<!--
+<div class="col-md-8 col-md-offset-2 text-center">
+
+</div>
+-->
+			<section id="one" class="wrapper style2 special">
+				<header class="major">
+				  <h2>Sample Data</h2>
+				</header>
+<div class="row">
+<div class="col-md-3 col-md-offset-2 text-center">
+<h1>So Optimistic</h1>
+<ul>
+{% if tweets_plus %}
+	{% for tweet in tweets_plus %}
+	<li>{{ tweet.text }}</li>
+	{% endfor %}
+{% endif %}
+	</ul>
+		</div>
+<div class="col-md-3 col-md-offset-2 text-center">
+<h1>So Pessimistic</h1>
+<ul>
+{% if tweets_minus %}
+	{% for tweet in tweets_minus %}
+	<li>{{ tweet.text }}</li>
+	{% endfor %}
+{% endif %}
+	</ul>
+		</div>
+<div class="col-md-3 col-md-offset-2 text-center">
+<h1>Straight Facts</h1>
+<ul>
+{% if tweets_fact %}
+	{% for tweet in tweets_fact %}
+	<li>{{ tweet.text }}</li>
+	{% endfor %}
+{% endif %}
+	</ul>
+		</div>
+<div class="col-md-3 col-md-offset-2 text-center">
+<h1>Full Of It</h1>
+<ul>
+{% if tweets_unfact %}
+	{% for tweet in tweets_unfact %}
+	<li>{{ tweet.text }}</li>
+	{% endfor %}
+{% endif %}
+	</ul>
+		</div>
+			</div>
+	<br></br>
+		<br></br>
+					<section id="one" class="wrapper style2 special">
+				<header class="major">
+				  <h2>BS-Meter</h2>
+				  <p>Analyzed with machine learning, calculated through complex statistical models, and ultimately presented to you in a single rating</p>
+				<br></br>
+				<p>Due to lack of time this feature will be implemented shortly, stay tuned :) </p>
+				</header>
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+</footer>
+
+		<!-- Scripts -->
+			<script src="/static/jquery.min.js"></script>
+			<script src="/static/jquery.scrolly.min.js"></script>
+			<script src="/static/skel.min.js"></script>
+			<script src="/static/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/static/main.js"></script>
+
+	</body>
+</html>
+  </body>
+</html>
